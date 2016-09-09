@@ -1,0 +1,390 @@
+[2016-09-10 00:10:01] Program start.
+
+rs1_mid_blog_3 rs2_mid_blog_words rs2_mid_blog_words_filtered rs3_mid_topics
+delete file rs1_mid_blog_3
+delete file rs2_mid_blog_words
+delete file rs2_mid_blog_words_filtered
+delete file rs3_mid_topics
+delete tmp file end.
+pull data from 41.
+
+receiving file list ... done
+rs1_mid_blog_3_part1
+
+sent 57 bytes  received 6417405 bytes  1833560.57 bytes/sec
+total size is 13967619  speedup is 2.18
+receiving file list ... done
+rs1_mid_blog_3_part2
+
+sent 117 bytes  received 3622974 bytes  1449236.40 bytes/sec
+total size is 7721804  speedup is 2.13
+pull data end.
+
+total files number : 1
+filter blog.....
+16/09/10 00:10:22 INFO fs.TrashPolicyDefault: Namenode trash configuration: Deletion interval = 1440 minutes, Emptier interval = 0 minutes.
+Moved: 'hdfs://ns1/user/weibo_bigdata_dm/yuanye8/weibo_lda_input/rs2_mid_blog_words' to trash at: hdfs://ns1/user/weibo_bigdata_dm/.Trash/Current
+*******Sat Sep 10 00:10:26 CST 2016 start: ./run.sh  *******
+16/09/10 00:10:27 INFO fs.TrashPolicyDefault: Namenode trash configuration: Deletion interval = 1440 minutes, Emptier interval = 0 minutes.
+Moved: 'hdfs://ns1/user/weibo_bigdata_dm/yuanye8/weibo_lda_input/rs2_mid_blog_words_filtered' to trash at: hdfs://ns1/user/weibo_bigdata_dm/.Trash/Current
+16/09/10 00:10:28 WARN streaming.StreamJob: -file option is deprecated, please use generic option -files instead.
+16/09/10 00:10:29 WARN streaming.StreamJob: -jobconf option is deprecated, please use -D instead.
+16/09/10 00:10:29 INFO Configuration.deprecation: mapred.map.tasks is deprecated. Instead, use mapreduce.job.maps
+16/09/10 00:10:29 INFO Configuration.deprecation: mapred.reduce.tasks is deprecated. Instead, use mapreduce.job.reduces
+16/09/10 00:10:29 INFO Configuration.deprecation: mapred.job.name is deprecated. Instead, use mapreduce.job.name
+packageJobJar: [./filter_blog_words.py, ../../data/topic_words.list, /tmp/hadoop-weibo_bigdata_dm/hadoop-unjar1235660834350584824/] [] /tmp/streamjob4915944033950974379.jar tmpDir=null
+16/09/10 00:10:31 INFO lzo.GPLNativeCodeLoader: Loaded native gpl library
+16/09/10 00:10:31 INFO lzo.LzoCodec: Successfully loaded & initialized native-lzo library [hadoop-lzo rev 75c4b407e5177b40c3a3f7fa36a4c703a766c506]
+16/09/10 00:10:31 INFO mapred.FileInputFormat: Total input paths to process : 1
+16/09/10 00:10:31 INFO mapreduce.JobSubmitter: number of splits:50
+16/09/10 00:10:32 INFO mapreduce.JobSubmitter: Submitting tokens for job: job_1470311300058_2425629
+16/09/10 00:10:32 INFO mapred.YARNRunner: Launch job with jobPriority : 1
+16/09/10 00:10:32 INFO impl.YarnClientImpl: Submitted application application_1470311300058_2425629
+16/09/10 00:10:32 INFO mapreduce.Job: The url to track the job: http://rm1.hadoop.data.sina.com.cn:9008/proxy/application_1470311300058_2425629/
+16/09/10 00:10:32 INFO mapreduce.Job: Running job: job_1470311300058_2425629
+16/09/10 00:10:40 INFO mapreduce.Job: Job job_1470311300058_2425629 running in uber mode : false
+16/09/10 00:10:40 INFO mapreduce.Job:  map 0% reduce 0%
+16/09/10 00:10:48 INFO mapreduce.Job:  map 6% reduce 0%
+16/09/10 00:10:49 INFO mapreduce.Job:  map 56% reduce 0%
+16/09/10 00:10:50 INFO mapreduce.Job:  map 90% reduce 0%
+16/09/10 00:10:51 INFO mapreduce.Job:  map 98% reduce 0%
+16/09/10 00:10:53 INFO mapreduce.Job:  map 100% reduce 0%
+16/09/10 00:10:58 INFO mapreduce.Job:  map 100% reduce 30%
+16/09/10 00:10:59 INFO mapreduce.Job:  map 100% reduce 70%
+16/09/10 00:11:00 INFO mapreduce.Job:  map 100% reduce 100%
+16/09/10 00:11:01 INFO mapreduce.Job: Job job_1470311300058_2425629 completed successfully
+16/09/10 00:11:02 INFO mapreduce.Job: Counters: 49
+	File System Counters
+		FILE: Number of bytes read=4037159
+		FILE: Number of bytes written=14975764
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+		HDFS: Number of bytes read=14325464
+		HDFS: Number of bytes written=6758017
+		HDFS: Number of read operations=180
+		HDFS: Number of large read operations=0
+		HDFS: Number of write operations=20
+	Job Counters 
+		Launched map tasks=50
+		Launched reduce tasks=10
+		Rack-local map tasks=50
+		Total time spent by all maps in occupied slots (ms)=766110
+		Total time spent by all reduces in occupied slots (ms)=147032
+		Total time spent by all map tasks (ms)=383055
+		Total time spent by all reduce tasks (ms)=73516
+		Total vcore-seconds taken by all map tasks=383055
+		Total vcore-seconds taken by all reduce tasks=73516
+		Total megabyte-seconds taken by all map tasks=588372480
+		Total megabyte-seconds taken by all reduce tasks=150560768
+	Map-Reduce Framework
+		Map input records=44195
+		Map output records=43635
+		Map output bytes=6782137
+		Map output materialized bytes=4504407
+		Input split bytes=6350
+		Combine input records=0
+		Combine output records=0
+		Reduce input groups=42275
+		Reduce shuffle bytes=4504407
+		Reduce input records=43635
+		Reduce output records=43635
+		Spilled Records=87270
+		Shuffled Maps =500
+		Failed Shuffles=0
+		Merged Map outputs=500
+		GC time elapsed (ms)=2044
+		CPU time spent (ms)=118860
+		Physical memory (bytes) snapshot=44148690944
+		Virtual memory (bytes) snapshot=136759988224
+		Total committed heap usage (bytes)=63430983680
+	Shuffle Errors
+		BAD_ID=0
+		CONNECTION=0
+		IO_ERROR=0
+		WRONG_LENGTH=0
+		WRONG_MAP=0
+		WRONG_REDUCE=0
+	File Input Format Counters 
+		Bytes Read=14319114
+	File Output Format Counters 
+		Bytes Written=6758017
+16/09/10 00:11:02 INFO streaming.StreamJob: Output directory: /user/weibo_bigdata_dm/yuanye8/weibo_lda_input/rs2_mid_blog_words_filtered
+*******Sat Sep 10 00:11:02 CST 2016 done: ./run.sh  *******
+ [get file to /usr/home/weibo_bigdata_dm/yuanye8/weibo_lda_similar_cal/src/../tmp_data/rs2_mid_blog_words_filtered] 
+filter blog end.....
+[2016-09-10 00:11:05] input data in LDA for topic cal...
+
+16/09/10 00:11:48 INFO fs.TrashPolicyDefault: Namenode trash configuration: Deletion interval = 1440 minutes, Emptier interval = 0 minutes.
+Moved: 'hdfs://ns1/user/weibo_bigdata_dm/yuanye8/weibo_lda_input/rs3_mid_topics' to trash at: hdfs://ns1/user/weibo_bigdata_dm/.Trash/Current
+ [ upload file /usr/home/weibo_bigdata_dm/yuanye8/weibo_lda_similar_cal/src/../tmp_data/rs3_mid_topics to HDFS. ] 
+[2016-09-10 00:11:51] cal lda topics end.
+
+[2016-09-10 00:11:51] cal each other's similarity and output final result...
+
+*******Sat Sep 10 00:11:51 CST 2016 start: ./run.sh  *******
+rmr: `/user/weibo_bigdata_dm/yuanye8/weibo_lda_output': No such file or directory
+16/09/10 00:11:54 WARN streaming.StreamJob: -file option is deprecated, please use generic option -files instead.
+16/09/10 00:11:54 WARN streaming.StreamJob: -jobconf option is deprecated, please use -D instead.
+16/09/10 00:11:54 INFO Configuration.deprecation: mapred.map.tasks is deprecated. Instead, use mapreduce.job.maps
+16/09/10 00:11:54 INFO Configuration.deprecation: mapred.reduce.tasks is deprecated. Instead, use mapreduce.job.reduces
+16/09/10 00:11:54 INFO Configuration.deprecation: mapred.job.name is deprecated. Instead, use mapreduce.job.name
+packageJobJar: [./mapper.py, ./reducer.py, ../../tmp_data/rs3_mid_topics, ./object_set, /tmp/hadoop-weibo_bigdata_dm/hadoop-unjar5983734923104189520/] [] /tmp/streamjob957201973036552521.jar tmpDir=null
+16/09/10 00:11:58 INFO lzo.GPLNativeCodeLoader: Loaded native gpl library
+16/09/10 00:11:58 INFO lzo.LzoCodec: Successfully loaded & initialized native-lzo library [hadoop-lzo rev 75c4b407e5177b40c3a3f7fa36a4c703a766c506]
+16/09/10 00:11:58 INFO mapred.FileInputFormat: Total input paths to process : 1
+16/09/10 00:11:58 INFO mapreduce.JobSubmitter: number of splits:50
+16/09/10 00:11:58 INFO mapreduce.JobSubmitter: Submitting tokens for job: job_1470311300058_2425664
+16/09/10 00:11:58 INFO mapred.YARNRunner: Launch job with jobPriority : 1
+16/09/10 00:11:58 INFO impl.YarnClientImpl: Submitted application application_1470311300058_2425664
+16/09/10 00:11:58 INFO mapreduce.Job: The url to track the job: N/A
+16/09/10 00:11:58 INFO mapreduce.Job: Running job: job_1470311300058_2425664
+16/09/10 00:12:09 INFO mapreduce.Job: Job job_1470311300058_2425664 running in uber mode : false
+16/09/10 00:12:09 INFO mapreduce.Job:  map 0% reduce 0%
+16/09/10 00:12:24 INFO mapreduce.Job:  map 7% reduce 0%
+16/09/10 00:12:25 INFO mapreduce.Job:  map 12% reduce 0%
+16/09/10 00:12:26 INFO mapreduce.Job:  map 20% reduce 0%
+16/09/10 00:12:27 INFO mapreduce.Job:  map 24% reduce 0%
+16/09/10 00:12:28 INFO mapreduce.Job:  map 27% reduce 0%
+16/09/10 00:12:29 INFO mapreduce.Job:  map 29% reduce 0%
+16/09/10 00:12:30 INFO mapreduce.Job:  map 30% reduce 0%
+16/09/10 00:12:31 INFO mapreduce.Job:  map 31% reduce 0%
+16/09/10 00:12:37 INFO mapreduce.Job:  map 32% reduce 0%
+16/09/10 00:12:44 INFO mapreduce.Job:  map 33% reduce 0%
+16/09/10 00:12:45 INFO mapreduce.Job:  map 34% reduce 0%
+16/09/10 00:13:31 INFO mapreduce.Job:  map 35% reduce 0%
+16/09/10 00:13:34 INFO mapreduce.Job:  map 37% reduce 0%
+16/09/10 00:13:37 INFO mapreduce.Job:  map 39% reduce 0%
+16/09/10 00:13:39 INFO mapreduce.Job:  map 40% reduce 0%
+16/09/10 00:13:41 INFO mapreduce.Job:  map 43% reduce 0%
+16/09/10 00:13:44 INFO mapreduce.Job:  map 46% reduce 0%
+16/09/10 00:13:45 INFO mapreduce.Job:  map 47% reduce 0%
+16/09/10 00:13:46 INFO mapreduce.Job:  map 49% reduce 0%
+16/09/10 00:13:47 INFO mapreduce.Job:  map 50% reduce 0%
+16/09/10 00:13:51 INFO mapreduce.Job:  map 52% reduce 0%
+16/09/10 00:13:52 INFO mapreduce.Job:  map 53% reduce 0%
+16/09/10 00:13:53 INFO mapreduce.Job:  map 54% reduce 0%
+16/09/10 00:13:54 INFO mapreduce.Job:  map 55% reduce 0%
+16/09/10 00:13:55 INFO mapreduce.Job:  map 56% reduce 0%
+16/09/10 00:13:57 INFO mapreduce.Job:  map 58% reduce 0%
+16/09/10 00:14:00 INFO mapreduce.Job:  map 60% reduce 0%
+16/09/10 00:14:03 INFO mapreduce.Job:  map 61% reduce 0%
+16/09/10 00:14:07 INFO mapreduce.Job:  map 62% reduce 0%
+16/09/10 00:14:10 INFO mapreduce.Job:  map 63% reduce 0%
+16/09/10 00:14:19 INFO mapreduce.Job:  map 64% reduce 0%
+16/09/10 00:14:33 INFO mapreduce.Job:  map 65% reduce 0%
+16/09/10 00:14:39 INFO mapreduce.Job:  map 66% reduce 0%
+16/09/10 00:14:56 INFO mapreduce.Job:  map 67% reduce 0%
+16/09/10 00:17:45 INFO mapreduce.Job:  map 68% reduce 0%
+16/09/10 00:17:48 INFO mapreduce.Job:  map 69% reduce 0%
+16/09/10 00:17:53 INFO mapreduce.Job:  map 70% reduce 0%
+16/09/10 00:17:54 INFO mapreduce.Job:  map 71% reduce 0%
+16/09/10 00:17:55 INFO mapreduce.Job:  map 72% reduce 0%
+16/09/10 00:17:57 INFO mapreduce.Job:  map 73% reduce 0%
+16/09/10 00:17:59 INFO mapreduce.Job:  map 74% reduce 0%
+16/09/10 00:18:00 INFO mapreduce.Job:  map 75% reduce 0%
+16/09/10 00:18:03 INFO mapreduce.Job:  map 76% reduce 0%
+16/09/10 00:18:05 INFO mapreduce.Job:  map 77% reduce 0%
+16/09/10 00:18:06 INFO mapreduce.Job:  map 78% reduce 0%
+16/09/10 00:18:09 INFO mapreduce.Job:  map 81% reduce 0%
+16/09/10 00:18:11 INFO mapreduce.Job:  map 82% reduce 0%
+16/09/10 00:18:12 INFO mapreduce.Job:  map 83% reduce 0%
+16/09/10 00:18:13 INFO mapreduce.Job:  map 84% reduce 0%
+16/09/10 00:18:14 INFO mapreduce.Job:  map 85% reduce 0%
+16/09/10 00:18:18 INFO mapreduce.Job:  map 86% reduce 0%
+16/09/10 00:18:19 INFO mapreduce.Job:  map 87% reduce 0%
+16/09/10 00:18:24 INFO mapreduce.Job:  map 88% reduce 0%
+16/09/10 00:18:25 INFO mapreduce.Job:  map 89% reduce 0%
+16/09/10 00:18:27 INFO mapreduce.Job:  map 90% reduce 14%
+16/09/10 00:18:28 INFO mapreduce.Job:  map 91% reduce 23%
+16/09/10 00:18:30 INFO mapreduce.Job:  map 92% reduce 24%
+16/09/10 00:18:31 INFO mapreduce.Job:  map 92% reduce 25%
+16/09/10 00:18:34 INFO mapreduce.Job:  map 93% reduce 26%
+16/09/10 00:18:42 INFO mapreduce.Job:  map 94% reduce 27%
+16/09/10 00:18:44 INFO mapreduce.Job:  map 95% reduce 27%
+16/09/10 00:18:45 INFO mapreduce.Job:  map 95% reduce 28%
+16/09/10 00:18:47 INFO mapreduce.Job:  map 96% reduce 29%
+16/09/10 00:19:14 INFO mapreduce.Job:  map 97% reduce 29%
+16/09/10 00:19:16 INFO mapreduce.Job:  map 97% reduce 30%
+16/09/10 00:19:20 INFO mapreduce.Job:  map 97% reduce 31%
+16/09/10 00:19:46 INFO mapreduce.Job:  map 98% reduce 31%
+16/09/10 00:19:47 INFO mapreduce.Job:  map 99% reduce 31%
+16/09/10 00:19:48 INFO mapreduce.Job:  map 99% reduce 32%
+16/09/10 00:19:51 INFO mapreduce.Job:  map 99% reduce 33%
+16/09/10 00:20:09 INFO mapreduce.Job:  map 100% reduce 33%
+16/09/10 00:20:10 INFO mapreduce.Job:  map 100% reduce 57%
+16/09/10 00:20:11 INFO mapreduce.Job:  map 100% reduce 93%
+16/09/10 00:20:12 INFO mapreduce.Job:  map 100% reduce 100%
+16/09/10 00:20:12 INFO mapreduce.Job: Job job_1470311300058_2425664 completed successfully
+16/09/10 00:20:12 INFO mapreduce.Job: Counters: 49
+	File System Counters
+		FILE: Number of bytes read=32253760
+		FILE: Number of bytes written=70977903
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+		HDFS: Number of bytes read=13010583
+		HDFS: Number of bytes written=1894533
+		HDFS: Number of read operations=180
+		HDFS: Number of large read operations=0
+		HDFS: Number of write operations=20
+	Job Counters 
+		Launched map tasks=50
+		Launched reduce tasks=10
+		Rack-local map tasks=50
+		Total time spent by all maps in occupied slots (ms)=37193270
+		Total time spent by all reduces in occupied slots (ms)=2307964
+		Total time spent by all map tasks (ms)=18596635
+		Total time spent by all reduce tasks (ms)=1153982
+		Total vcore-seconds taken by all map tasks=18596635
+		Total vcore-seconds taken by all reduce tasks=1153982
+		Total megabyte-seconds taken by all map tasks=28564431360
+		Total megabyte-seconds taken by all reduce tasks=2363355136
+	Map-Reduce Framework
+		Map input records=43635
+		Map output records=1412237
+		Map output bytes=131363278
+		Map output materialized bytes=32250845
+		Input split bytes=6150
+		Combine input records=0
+		Combine output records=0
+		Reduce input groups=29975
+		Reduce shuffle bytes=32250845
+		Reduce input records=1412237
+		Reduce output records=29975
+		Spilled Records=2824474
+		Shuffled Maps =500
+		Failed Shuffles=0
+		Merged Map outputs=500
+		GC time elapsed (ms)=15266
+		CPU time spent (ms)=18420800
+		Physical memory (bytes) snapshot=50201456640
+		Virtual memory (bytes) snapshot=136585818112
+		Total committed heap usage (bytes)=65317896192
+	Shuffle Errors
+		BAD_ID=0
+		CONNECTION=0
+		IO_ERROR=0
+		WRONG_LENGTH=0
+		WRONG_MAP=0
+		WRONG_REDUCE=0
+	File Input Format Counters 
+		Bytes Read=13004433
+	File Output Format Counters 
+		Bytes Written=1894533
+16/09/10 00:20:12 INFO streaming.StreamJob: Output directory: /user/weibo_bigdata_dm/yuanye8/weibo_lda_output
+*******Sat Sep 10 00:20:12 CST 2016 done: ./run.sh  *******
+[2016-09-10 00:20:15] cal similarity end.
+
+output: 29975 lines data. path: [project]/result/weibo_lda_output
+[2016-09-10 00:20:15] mv output data to result direcotry.
+
+16/09/10 00:20:19 INFO fs.TrashPolicyDefault: Namenode trash configuration: Deletion interval = 1440 minutes, Emptier interval = 0 minutes.
+Moved: 'hdfs://ns1/user/weibo_bigdata_dm/yuanye8/result/weibo_lda_output' to trash at: hdfs://ns1/user/weibo_bigdata_dm/.Trash/Current
+[2016-09-10 00:20:23] trans data to json format.
+
+pull data from remote.
+receiving file list ... done
+info_3
+
+sent 103 bytes  received 317558 bytes  635322.00 bytes/sec
+total size is 1550531  speedup is 4.88
+receiving file list ... done
+info_3
+
+sent 57 bytes  received 551801 bytes  1103716.00 bytes/sec
+total size is 2823492  speedup is 5.12
+pull data end.
+*******Sat Sep 10 00:20:24 CST 2016 start: ./run.sh  *******
+16/09/10 00:20:26 INFO fs.TrashPolicyDefault: Namenode trash configuration: Deletion interval = 1440 minutes, Emptier interval = 0 minutes.
+Moved: 'hdfs://ns1/user/weibo_bigdata_dm/yuanye8/result/weibo_lda_output_json' to trash at: hdfs://ns1/user/weibo_bigdata_dm/.Trash/Current
+16/09/10 00:20:27 WARN streaming.StreamJob: -file option is deprecated, please use generic option -files instead.
+16/09/10 00:20:28 WARN streaming.StreamJob: -jobconf option is deprecated, please use -D instead.
+16/09/10 00:20:28 INFO Configuration.deprecation: mapred.map.tasks is deprecated. Instead, use mapreduce.job.maps
+16/09/10 00:20:28 INFO Configuration.deprecation: mapred.reduce.tasks is deprecated. Instead, use mapreduce.job.reduces
+16/09/10 00:20:28 INFO Configuration.deprecation: mapred.job.name is deprecated. Instead, use mapreduce.job.name
+packageJobJar: [./mapper.py, ./reducer.py, ./info_3, /tmp/hadoop-weibo_bigdata_dm/hadoop-unjar4986719515779902644/] [] /tmp/streamjob1735023320249862855.jar tmpDir=null
+16/09/10 00:20:30 INFO lzo.GPLNativeCodeLoader: Loaded native gpl library
+16/09/10 00:20:30 INFO lzo.LzoCodec: Successfully loaded & initialized native-lzo library [hadoop-lzo rev 75c4b407e5177b40c3a3f7fa36a4c703a766c506]
+16/09/10 00:20:30 INFO mapred.FileInputFormat: Total input paths to process : 10
+16/09/10 00:20:31 INFO mapreduce.JobSubmitter: number of splits:51
+16/09/10 00:20:31 INFO mapreduce.JobSubmitter: Submitting tokens for job: job_1470311300058_2425830
+16/09/10 00:20:31 INFO mapred.YARNRunner: Launch job with jobPriority : 1
+16/09/10 00:20:31 INFO impl.YarnClientImpl: Submitted application application_1470311300058_2425830
+16/09/10 00:20:31 INFO mapreduce.Job: The url to track the job: N/A
+16/09/10 00:20:31 INFO mapreduce.Job: Running job: job_1470311300058_2425830
+16/09/10 00:20:40 INFO mapreduce.Job: Job job_1470311300058_2425830 running in uber mode : false
+16/09/10 00:20:40 INFO mapreduce.Job:  map 0% reduce 0%
+16/09/10 00:20:57 INFO mapreduce.Job:  map 47% reduce 0%
+16/09/10 00:20:58 INFO mapreduce.Job:  map 59% reduce 0%
+16/09/10 00:20:59 INFO mapreduce.Job:  map 88% reduce 0%
+16/09/10 00:21:00 INFO mapreduce.Job:  map 90% reduce 0%
+16/09/10 00:21:01 INFO mapreduce.Job:  map 94% reduce 0%
+16/09/10 00:21:02 INFO mapreduce.Job:  map 96% reduce 0%
+16/09/10 00:21:03 INFO mapreduce.Job:  map 97% reduce 0%
+16/09/10 00:21:04 INFO mapreduce.Job:  map 100% reduce 0%
+16/09/10 00:21:09 INFO mapreduce.Job:  map 100% reduce 10%
+16/09/10 00:21:10 INFO mapreduce.Job:  map 100% reduce 30%
+16/09/10 00:21:11 INFO mapreduce.Job:  map 100% reduce 70%
+16/09/10 00:21:12 INFO mapreduce.Job:  map 100% reduce 80%
+16/09/10 00:21:13 INFO mapreduce.Job:  map 100% reduce 100%
+16/09/10 00:21:13 INFO mapreduce.Job: Job job_1470311300058_2425830 completed successfully
+16/09/10 00:21:13 INFO mapreduce.Job: Counters: 50
+	File System Counters
+		FILE: Number of bytes read=2563556
+		FILE: Number of bytes written=11693028
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+		HDFS: Number of bytes read=2026880
+		HDFS: Number of bytes written=9602634
+		HDFS: Number of read operations=183
+		HDFS: Number of large read operations=0
+		HDFS: Number of write operations=20
+	Job Counters 
+		Launched map tasks=51
+		Launched reduce tasks=10
+		Rack-local map tasks=51
+		Container Released Total=14
+		Total time spent by all maps in occupied slots (ms)=886346
+		Total time spent by all reduces in occupied slots (ms)=133748
+		Total time spent by all map tasks (ms)=443173
+		Total time spent by all reduce tasks (ms)=66874
+		Total vcore-seconds taken by all map tasks=443173
+		Total vcore-seconds taken by all reduce tasks=66874
+		Total megabyte-seconds taken by all map tasks=680713728
+		Total megabyte-seconds taken by all reduce tasks=136957952
+	Map-Reduce Framework
+		Map input records=29975
+		Map output records=29975
+		Map output bytes=10140201
+		Map output materialized bytes=2572023
+		Input split bytes=6477
+		Combine input records=0
+		Combine output records=0
+		Reduce input groups=29975
+		Reduce shuffle bytes=2572023
+		Reduce input records=29975
+		Reduce output records=29975
+		Spilled Records=59950
+		Shuffled Maps =510
+		Failed Shuffles=0
+		Merged Map outputs=510
+		GC time elapsed (ms)=2458
+		CPU time spent (ms)=121460
+		Physical memory (bytes) snapshot=44720254976
+		Virtual memory (bytes) snapshot=141014142976
+		Total committed heap usage (bytes)=65325760512
+	Shuffle Errors
+		BAD_ID=0
+		CONNECTION=0
+		IO_ERROR=0
+		WRONG_LENGTH=0
+		WRONG_MAP=0
+		WRONG_REDUCE=0
+	File Input Format Counters 
+		Bytes Read=2020403
+	File Output Format Counters 
+		Bytes Written=9602634
+16/09/10 00:21:13 INFO streaming.StreamJob: Output directory: /user/weibo_bigdata_dm/yuanye8/result/weibo_lda_output_json
+*******Sat Sep 10 00:21:13 CST 2016 done: ./run.sh  *******
